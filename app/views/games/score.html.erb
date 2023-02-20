@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Games#score</h1>
+
+  <% if @included %>
+    <% if @english_word %>
+      <p>Congratulations <%= @word %> is a valid english word</p>
+    <% else %>
+      <p>Sorry but <%= @word %> does not seem to be an english word </p>
+    <% end %>
+  <% else %>
+      <p>Sorry but <%= @word %> can't be build out of <%= @letters %> </p>
+  <% end %>
+
+  <%= link_to 'Play Again', new_path %>
+</div>
